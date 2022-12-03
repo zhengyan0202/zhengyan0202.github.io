@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Vue TypeScript | zhengyan0202</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+  
+    <link rel="alternate" href="/zhengyan02020801/atom.xml" title="zhengyan0202" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/zhengyan02020801/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/zhengyan02020801/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/zhengyan02020801/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/zhengyan02020801/" id="logo">zhengyan0202</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/zhengyan02020801/" id="subtitle">时间是一种睿智的存在，不会辜负每一点付出。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/zhengyan02020801/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/archives/"><i class="fa fa-archive"></i> 归档</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/about/"><i class="fa fa-user"></i> 关于</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Vue ts" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Vue TypeScript
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-06-30T15:28:57.000Z" itemprop="datePublished">2019年06月30日</time>
+</span>
+      
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<!-- <a href="/zhengyan02020801/2019/06/30/Vue%20ts/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a> -->
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h6 id="1-TypeScript简介"><a href="#1-TypeScript简介" class="headerlink" title="1. TypeScript简介"></a>1. TypeScript简介</h6><p>TypeScript 是 JavaScript的超集，支持所有的JavaScript语法。并在此之上对 JavaScript添加了一些扩展，如 class &#x2F; interface &#x2F; module 等。这样会大大提升代码的可阅读性</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//安装</span><br><span class="line">npm install -g typescript</span><br><span class="line">//编译</span><br><span class="line">tsc helloworld.ts</span><br></pre></td></tr></table></figure>
+<h6 id="2-vue-class-component"><a href="#2-vue-class-component" class="headerlink" title="2. vue-class-component"></a>2. vue-class-component</h6><p>vue-class-component 对 Vue 组件进行了一层封装，让 Vue组件语法在结合了 TypeScript 语法之后更加扁平化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">  import Vue from &#x27;vue&#x27;</span><br><span class="line">  import Component from &#x27;vue-class-component&#x27;</span><br><span class="line"></span><br><span class="line">  @Component</span><br><span class="line">  export default class App extends Vue &#123;</span><br><span class="line">    // 初始化数据</span><br><span class="line">    msg = 123</span><br><span class="line">    // 声明周期钩子</span><br><span class="line">    mounted () &#123;</span><br><span class="line">      this.greet()</span><br><span class="line">    &#125;</span><br><span class="line">    // 计算属性</span><br><span class="line">    get computedMsg () &#123;</span><br><span class="line">      return &#x27;computed &#x27; + this.msg</span><br><span class="line">    </span><br><span class="line">    // 方法</span><br><span class="line">    greet () &#123;</span><br><span class="line">      alert(&#x27;greeting: &#x27; + this.msg)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="2-vue-property-decorator"><a href="#2-vue-property-decorator" class="headerlink" title="2. vue-property-decorator"></a>2. vue-property-decorator</h6><p>vue-property-decorator 是在 vue-class-component 上增强了更多的结合 Vue 特性的装饰器，新增了这 7 个装饰器：</p>
+<ul>
+<li>@Emit</li>
+<li>@Inject</li>
+<li>@Model</li>
+<li>@Prop</li>
+<li>@Provide</li>
+<li>@Watch</li>
+<li>@Component (从 vue-class-component 继承)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component, Emit, Inject, Model, Prop, Provide, Vue, Watch &#125; from &#x27;vue-property-decorator&#x27;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class HelloWorld extends Vue &#123;</span><br><span class="line">  @Prop()</span><br><span class="line">  msg!: string;</span><br><span class="line"></span><br><span class="line">  //data</span><br><span class="line">  name = &#x27;zhengyan&#x27;;</span><br><span class="line">  newName = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">  //生命周期</span><br><span class="line">  created(): void &#123;console.log(&#x27;created&#x27;)&#125;;</span><br><span class="line">  mounted(): void &#123;console.log(&#x27;mounted&#x27;)&#125;;</span><br><span class="line">  updated(): void &#123;console.log(&#x27;updated&#x27;)&#125;;</span><br><span class="line">  destroyed(): void &#123;console.log(&#x27;destroyed&#x27;)&#125;;</span><br><span class="line"></span><br><span class="line">  //计算属性: computed</span><br><span class="line">  get reversedMsg(): string[] &#123;</span><br><span class="line">    return [&#x27;zyan&#x27;]</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  //侦听属性</span><br><span class="line">  @Watch(&quot;name&quot;, &#123; immediate: true, deep: true &#125;)</span><br><span class="line">  onNameChange(newValue) &#123;</span><br><span class="line">    this.newName = newValue;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //method</span><br><span class="line">  changeMessage(): void &#123;</span><br><span class="line">    console.log(&#x27;changeMessage&#x27;)</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  getName(): string &#123;</span><br><span class="line">    console.log(this.msg);</span><br><span class="line">    console.log(this.reversedMsg);</span><br><span class="line">    return &#x27;zyan&#x27;;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+            <div id="toc-article">
+                
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/zhengyan02020801/2019/06/21/js%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          js数组去重
+        
+      </div>
+    </a>
+  
+  
+    <a href="/zhengyan02020801/2019/09/26/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          防抖与节流
+        
+      </div>
+    </a>
+  
+</nav>
+
+      
+      
+        
+
+
+
+
+
+
+
+
+      
+    </footer>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/zhengyan02020801/2020/05/21/js%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/">js时间转换</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/11/21/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">javascript设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/09/26/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/">防抖与节流</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/30/Vue%20ts/">Vue TypeScript</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/21/js%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">js数组去重</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2020/">2020年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2019/">2019年</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2018/">2018年</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="http://www.baidu.com/">百度</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.zhihu.com/">知乎</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/zhengyan02020801/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/zhengyan02020801/atom.xml">订阅本站</a>
+        <span> | </span><a href="/zhengyan02020801/about/">联系博主</a>
+      </p>
+      
+      <p>
+        <span>Copyright &copy; 2022 zhengyan.</span>
+        <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
+        <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </div>
+  
+<script src="/zhengyan02020801/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/zhengyan02020801/js/search.json.js"></script>
+
+
+  
+<script src="/zhengyan02020801/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/zhengyan02020801/js/script.js"></script>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+</body>
+</html>

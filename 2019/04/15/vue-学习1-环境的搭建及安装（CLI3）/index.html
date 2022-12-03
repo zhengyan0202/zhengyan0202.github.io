@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>vue 学习1 -- 环境的搭建及安装（CLI3） | zhengyan0202</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+  
+    <link rel="alternate" href="/zhengyan02020801/atom.xml" title="zhengyan0202" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/zhengyan02020801/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/zhengyan02020801/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/zhengyan02020801/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/zhengyan02020801/" id="logo">zhengyan0202</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/zhengyan02020801/" id="subtitle">时间是一种睿智的存在，不会辜负每一点付出。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/zhengyan02020801/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/archives/"><i class="fa fa-archive"></i> 归档</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/about/"><i class="fa fa-user"></i> 关于</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-vue-学习1-环境的搭建及安装（CLI3）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      vue 学习1 -- 环境的搭建及安装（CLI3）
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-04-14T16:26:49.000Z" itemprop="datePublished">2019年04月15日</time>
+</span>
+      
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<!-- <a href="/zhengyan02020801/2019/04/15/vue-%E5%AD%A6%E4%B9%A01-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%AE%89%E8%A3%85%EF%BC%88CLI3%EF%BC%89/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a> -->
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装node环境和npm"><a href="#1-安装node环境和npm" class="headerlink" title="1. 安装node环境和npm"></a>1. 安装<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">node</a>环境和npm</h4><blockquote>
+<p>Node 版本要求<br>Vue CLI 需要 Node.js 8.9 或更高版本 (推荐 8.11.0+)。</p>
+</blockquote>
+<p>检查node版本及npm版本</p>
+<blockquote>
+<p>node -v<br>npm -v</p>
+</blockquote>
+<span id="more"></span>
+
+<h4 id="2-安装cli3"><a href="#2-安装cli3" class="headerlink" title="2. 安装cli3"></a>2. 安装cli3</h4><blockquote>
+<p>之前项目使用CLI2，跟随技术跟新的脚步，这次学习使用CLI3, Vue CLI 的包名称由 vue-cli 改成了 @vue&#x2F;cli。若安装了旧版本的，还是先 npm uninstall vue-cli -g 卸载它。</p>
+</blockquote>
+<blockquote>
+<p><font color="#f40">npm install -g @vue&#x2F;cli     &#x2F;&#x2F;全局安装</p>
+</blockquote>
+<blockquote>
+<p>安装完后使用 vue -V &#x2F; vue –version  检查是否安装正确。</p>
+</blockquote>
+<h4 id="3-使用cli3创建一个项目"><a href="#3-使用cli3创建一个项目" class="headerlink" title="3. 使用cli3创建一个项目"></a>3. 使用cli3创建一个项目</h4><ol>
+<li><p>创建项目</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vue create vue-practice</span><br></pre></td></tr></table></figure></li>
+<li><p>选择如下，将vue核心插件安装</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed for your project: (*) Babel</span><br><span class="line"> ( ) TypeScript</span><br><span class="line"> ( ) Progressive Web App (PWA) Support</span><br><span class="line"> (*) Router</span><br><span class="line"> (*) Vuex</span><br><span class="line">&gt;(*) CSS Pre-processors</span><br><span class="line"> (*) Linter / Formatter</span><br><span class="line"> ( ) Unit Testing</span><br></pre></td></tr></table></figure></li>
+<li><p>使用history路由模式</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)</span><br></pre></td></tr></table></figure></li>
+<li><p>选择css处理器，一般选择第一个就可以了</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): (Use arrow keys)</span><br><span class="line">&gt; Sass/SCSS (with dart-sass)</span><br><span class="line">  Sass/SCSS (with node-sass)</span><br><span class="line">  Less</span><br><span class="line">  Stylus</span><br></pre></td></tr></table></figure></li>
+<li><p>代码风格，选择Prettier.</p>
+<blockquote>
+<p>什么是Prettier？一个有态度的代码格式化工具，支持多种语言，继承绝大多数编辑器，选项少，只需要保存文件，代码就会被整理格式，代码复查的时候不需要再争论风格，节约你的时间和精力。</p>
+</blockquote>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">? Pick a linter / formatter config:</span><br><span class="line">  ESLint with error prevention only</span><br><span class="line">  ESLint + Airbnb config</span><br><span class="line">  ESLint + Standard config</span><br><span class="line">&gt; ESLint + Prettier</span><br></pre></td></tr></table></figure></li>
+<li><p>什么时候进行校验，这里选择每次保存的时候进行校验。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Pick additional lint features:</span><br><span class="line">&gt;(*) Lint on save</span><br><span class="line"> ( ) Lint and fix on commit</span><br></pre></td></tr></table></figure></li>
+<li><p>选择lint的配置文件如何存放，这里我选了分别存到具体的config文件，而不是package.json，便于管理。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)</span><br><span class="line">&gt; In dedicated config files</span><br><span class="line">  In package.json</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把刚刚选择的配置文件保存起or不保存，这里选择不保存。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? Save this as a preset for future projects? (y/N) n</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>等待创建，初始化项目。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue CLI v3.5.1</span><br><span class="line">✨  Creating project in D:\new document\00study\vue学习\vue-practice.</span><br><span class="line">🗃  Initializing git repository...</span><br><span class="line">⚙  Installing CLI plugins. This might take a while...</span><br><span class="line"></span><br><span class="line">[ .................] - fetchMetadata: sill pacote range manifest for @babel/plugin-proposal-unicode-propert</span><br></pre></td></tr></table></figure></li>
+<li><p>启动项目</p>
+<blockquote>
+<p>$ npm run serve</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ npm run serve</span><br><span class="line">//成功启动：</span><br><span class="line">DONE  Compiled successfully in 7430ms</span><br><span class="line"></span><br><span class="line">    App running at:</span><br><span class="line">      - Local:   http://localhost:8080/</span><br><span class="line">      - Network: http://192.168.232.1:8080/</span><br><span class="line">    </span><br><span class="line">      Note that the development build is not optimized.</span><br><span class="line">      To create a production build, run npm run build.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>或者使用启动GUI界面，方便启动观察项目情况。</p>
+<blockquote>
+<p>$ vue ui</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vue ui</span><br><span class="line">🚀  Starting GUI...</span><br><span class="line">🌠  Ready on http://localhost:8000</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+        
+            <div id="toc-article">
+                
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/zhengyan02020801/2019/04/03/vue%E5%AD%A6%E4%B9%A0%E5%89%8D%E8%A8%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          vue学习前言
+        
+      </div>
+    </a>
+  
+  
+    <a href="/zhengyan02020801/2019/04/22/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          前端数据存储
+        
+      </div>
+    </a>
+  
+</nav>
+
+      
+      
+        
+
+
+
+
+
+
+
+
+      
+    </footer>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/zhengyan02020801/2020/05/21/js%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/">js时间转换</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/11/21/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">javascript设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/09/26/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/">防抖与节流</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/30/Vue%20ts/">Vue TypeScript</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/21/js%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">js数组去重</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2020/">2020年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2019/">2019年</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2018/">2018年</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="http://www.baidu.com/">百度</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.zhihu.com/">知乎</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/zhengyan02020801/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/zhengyan02020801/atom.xml">订阅本站</a>
+        <span> | </span><a href="/zhengyan02020801/about/">联系博主</a>
+      </p>
+      
+      <p>
+        <span>Copyright &copy; 2022 zhengyan.</span>
+        <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
+        <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </div>
+  
+<script src="/zhengyan02020801/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/zhengyan02020801/js/search.json.js"></script>
+
+
+  
+<script src="/zhengyan02020801/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/zhengyan02020801/js/script.js"></script>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+</body>
+</html>

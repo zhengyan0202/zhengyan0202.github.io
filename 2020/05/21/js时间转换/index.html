@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>js时间转换 | zhengyan0202</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+  
+    <link rel="alternate" href="/zhengyan02020801/atom.xml" title="zhengyan0202" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/zhengyan02020801/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/zhengyan02020801/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/zhengyan02020801/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/zhengyan02020801/" id="logo">zhengyan0202</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/zhengyan02020801/" id="subtitle">时间是一种睿智的存在，不会辜负每一点付出。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/zhengyan02020801/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/archives/"><i class="fa fa-archive"></i> 归档</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/about/"><i class="fa fa-user"></i> 关于</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-js时间转换" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      js时间转换
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2020-05-21T14:42:54.000Z" itemprop="datePublished">2020年05月21日</time>
+</span>
+      
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<!-- <a href="/zhengyan02020801/2020/05/21/js%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a> -->
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="js时间转换"><a href="#js时间转换" class="headerlink" title="js时间转换"></a>js时间转换</h4><p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tosee/p/5538007.html">：https://www.cnblogs.com/tosee/p/5538007.html</a>  </p>
+<p><strong>UTC：</strong><br>UTC指的是Coordinated Universal Time－ 世界协调时间（又称世界标准时间、世界统一时间），是经过平均太阳时(以格林威治时间GMT为准)、地轴运动修正后的新时标以及以「秒」为单位的国际原子时所综合精算而成的时间，计算过程相当严谨精密，因此若以「世界标准时间」的角度来说，UTC比GMT来得更加精准。其误差值必须保持在0.9秒以内，若大于0.9秒则由位于巴黎的国际地球自转事务中央局发布闰秒，使UTC与地球自转周期一致。  </p>
+<span id="more"></span>
+
+<p><strong>GMT：</strong><br>十七世纪，格林威治皇家天文台为了海上霸权的扩张计画而进行天体观测。1675年旧皇家观测所(Old Royal Observatory) 正式成立，到了1884年决定以通过格林威治的子午线作为划分地球东西两半球的经度零度。观测所门口墙上有一个标志24小时的时钟，显示当下的时间，对全球而言，这里所设定的时间是世界时间参考点，全球都以格林威治的时间作为标准来设定时间，这就是我们耳熟能详的「格林威治标准时间(Greenwich Mean Time，简称G.M.T.)的由来，标示在手表上，则代表此表具有两地时间功能，也就是同时可以显示原居地和另一个国度的时间。  </p>
+<p>UTC与GMT一般视为无差，UTC是以原子时计时,更加精准,适应现代社会的精确计时。不过一般使用不需要精确到秒时,视为等同。GMT是前世界标准时，UTC是现世界标准时。</p>
+<p>整个地球分为二十四时区<br>北京时区是东八区，领先UTC八个小时<br>&#x3D;&#x3D;UTC + 时区差 ＝ 本地时间&#x3D;&#x3D;  </p>
+<p><strong>ISO：</strong>  </p>
+<p>国际标准化组织的国际标准ISO 8601是日期和时间的表示方法，全称为《数据存储和交换形式·信息交换·日期和时间的表示方法》<br>形如：”2020-05-21T13:51:09.962Z”</p>
+<h6 id="ISO时间转为时间戳："><a href="#ISO时间转为时间戳：" class="headerlink" title="ISO时间转为时间戳："></a>ISO时间转为时间戳：</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//获取ISO时间  new Date().toISOString()</span><br><span class="line"><span class="keyword">function</span> isoToTimestamp(isodate) &#123;</span><br><span class="line">    <span class="built_in">let</span> format = Date.parse(isodate.replace(/-/g, <span class="string">&#x27;/&#x27;</span>).replace(/T/g, <span class="string">&#x27; &#x27;</span>).replace(/Z/, <span class="string">&quot;&quot;</span>))</span><br><span class="line">    <span class="built_in">return</span> format;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="UTC时间格式化，-时间戳格式化"><a href="#UTC时间格式化，-时间戳格式化" class="headerlink" title="UTC时间格式化， 时间戳格式化"></a>UTC时间格式化， 时间戳格式化</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">let UTCDate = new Date(时间戳);</span><br><span class="line"></span><br><span class="line">//UTC时间格式化  YYYY-MM-DD HH:MM:SS params:date 为Date对象。</span><br><span class="line">function formatTime(date) &#123;</span><br><span class="line">    !date &amp;&amp; (date = new Date());</span><br><span class="line">    let year = date.getFullYear();</span><br><span class="line">    let month = date.getMonth() + 1;</span><br><span class="line">    let day = date.getDate();</span><br><span class="line">    let hour = date.getHours();</span><br><span class="line">    let minute = date.getMinutes();</span><br><span class="line">    let second = date.getSeconds();</span><br><span class="line">    return `$&#123;year&#125;-$&#123;padLeft(month)&#125;-$&#123;padLeft(day)&#125; $&#123;padLeft(hour)&#125;:$&#123;padLeft(minute)&#125;:$&#123;padLeft(second)&#125;`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function padLeft(str) &#123;</span><br><span class="line">    return (&quot;&quot; + str).padStart(2,&quot;0&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+            <div id="toc-article">
+                
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/zhengyan02020801/2019/11/21/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          javascript设计模式
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+      
+      
+        
+
+
+
+
+
+
+
+
+      
+    </footer>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/zhengyan02020801/2020/05/21/js%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/">js时间转换</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/11/21/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">javascript设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/09/26/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/">防抖与节流</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/30/Vue%20ts/">Vue TypeScript</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/21/js%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">js数组去重</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2020/">2020年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2019/">2019年</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2018/">2018年</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="http://www.baidu.com/">百度</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.zhihu.com/">知乎</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/zhengyan02020801/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/zhengyan02020801/atom.xml">订阅本站</a>
+        <span> | </span><a href="/zhengyan02020801/about/">联系博主</a>
+      </p>
+      
+      <p>
+        <span>Copyright &copy; 2022 zhengyan.</span>
+        <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
+        <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </div>
+  
+<script src="/zhengyan02020801/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/zhengyan02020801/js/search.json.js"></script>
+
+
+  
+<script src="/zhengyan02020801/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/zhengyan02020801/js/script.js"></script>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+</body>
+</html>

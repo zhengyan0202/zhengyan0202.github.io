@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>前端数据存储 | zhengyan0202</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+  
+    <link rel="alternate" href="/zhengyan02020801/atom.xml" title="zhengyan0202" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/zhengyan02020801/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/zhengyan02020801/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/zhengyan02020801/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/zhengyan02020801/" id="logo">zhengyan0202</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/zhengyan02020801/" id="subtitle">时间是一种睿智的存在，不会辜负每一点付出。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/zhengyan02020801/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/archives/"><i class="fa fa-archive"></i> 归档</a>
+        
+          <a class="main-nav-link" href="/zhengyan02020801/about/"><i class="fa fa-user"></i> 关于</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-前端数据存储" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      前端数据存储
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-04-22T15:00:04.000Z" itemprop="datePublished">2019年04月22日</time>
+</span>
+      
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<!-- <a href="/zhengyan02020801/2019/04/22/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a> -->
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在客户端存储用户信息的技术，一般存储登录信息、偏好设置或其他数据。</p>
+<ul>
+<li>cookie</li>
+<li>sessionStorage</li>
+<li>localStorage</li>
+</ul>
+<span id="more"></span>
+
+<h5 id="一、localStroage"><a href="#一、localStroage" class="headerlink" title="一、localStroage"></a>一、localStroage</h5><ol>
+<li>什么是localStroage<blockquote>
+<p>主要用来作为本地存储来使用，解决cookie存储空间不足的问题（4k），localStorage一般浏览器支持的是5M，不同浏览器有所不同。<br>localStorage受同源策略约束，要访问该对象，页面必须来自同一个域名（子域名无效），使用同一种协议，在同一个端口上。</p>
+</blockquote>
+</li>
+<li>优势<ol>
+<li>localStorage拓展了cookie的4K限制</li>
+<li>localStorage会可以将第一次请求的数据直接存储到本地，这个相当于一个5M大小的针对于前端页面的数据库，相比于cookie可以节约带宽，但是这个却是只有在高版本的浏览器中才支持的。</li>
+</ol>
+</li>
+<li>局限<ol>
+<li>浏览器的大小不统一，并且在IE8以上的IE版本才支持localStorage这个属性</br></li>
+<li>目前所有的浏览器中都会把localStorage的值类型限定为string类型，这个在对我们日常比较常见的JSON对象类型需要一些转换</li>
+<li>localStorage在浏览器的隐私模式下面是不可读取的</li>
+<li>localStorage本质上是对字符串的读取，如果存储内容多的话会消耗内存空间，会导致页面变卡</li>
+<li>localStorage不能被爬虫抓取到</li>
+</ol>
+</li>
+<li>使用<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setItem</td>
+<td>存储数据</td>
+</tr>
+<tr>
+<td>getItem</td>
+<td>读取数据</td>
+</tr>
+<tr>
+<td>removeItem</td>
+<td>删除某个具体变量</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>清空localStorage上存储的数据</td>
+</tr>
+</tbody></table>
+<h6 id="存储（修改时同理）"><a href="#存储（修改时同理）" class="headerlink" title="存储（修改时同理）"></a>存储（修改时同理）</h6> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//方法一：</span><br><span class="line">localStorage.setItem(&quot;isLogin&quot;, true);</span><br><span class="line">//方法二：</span><br><span class="line">localStorage[&quot;isLogin&quot;] = true;</span><br><span class="line">//方法三：</span><br><span class="line">localStorage.isLogin = true;</span><br></pre></td></tr></table></figure>
+<h6 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h6> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//方法一：</span><br><span class="line">localStorage.getItem(&quot;isLogin&quot;);</span><br><span class="line">//方法二：</span><br><span class="line">localStorage[&quot;isLogin&quot;];</span><br><span class="line">//方法三：</span><br><span class="line">localStorage.isLogin;</span><br></pre></td></tr></table></figure>
+<h6 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h6> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//删除所有内容：</span><br><span class="line">localStorage.clear();</span><br><span class="line">//删除某个：</span><br><span class="line">localStorage.removeItem(&quot;isLogin&quot;);</span><br></pre></td></tr></table></figure></li>
+<li>注意事项<h6 id="将一个JSON对象存入localStorage中，需要将其转化为JSON字符串，使用时将在转为对象形式。"><a href="#将一个JSON对象存入localStorage中，需要将其转化为JSON字符串，使用时将在转为对象形式。" class="headerlink" title="将一个JSON对象存入localStorage中，需要将其转化为JSON字符串，使用时将在转为对象形式。"></a>将一个JSON对象存入localStorage中，需要将其转化为JSON字符串，使用时将在转为对象形式。</h6> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//错误</span><br><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2&#125;;</span><br><span class="line">localStorage.setItem(<span class="string">&quot;obj&quot;</span>, obj)</span><br><span class="line">console.log(localStorage.getItem(<span class="string">&quot;obj&quot;</span>))    //[object Object]</span><br><span class="line"></span><br><span class="line">//正确</span><br><span class="line"><span class="built_in">let</span> obj = &#123;a: 1, b: 2&#125;;</span><br><span class="line">localStorage.setItem(<span class="string">&quot;obj&quot;</span>, JSON.stringify(obj));</span><br><span class="line"><span class="built_in">let</span> getObj = localStorage.getItem(<span class="string">&quot;obj&quot;</span>);</span><br><span class="line">console.log(getObj)    //<span class="string">&quot;&#123;&quot;</span>a<span class="string">&quot;:1,&quot;</span>b<span class="string">&quot;:2&#125;&quot;</span></span><br><span class="line">typeof(getObj)     //string</span><br><span class="line"></span><br><span class="line">//使用时转换为对象</span><br><span class="line">JSON.parse(getObj)     //&#123;a: 1, b: 2&#125;</span><br><span class="line">typeof(JSON.parse(getObj))     //object</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+        
+            <div id="toc-article">
+                
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/zhengyan02020801/2019/04/15/vue-%E5%AD%A6%E4%B9%A01-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%AE%89%E8%A3%85%EF%BC%88CLI3%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          vue 学习1 -- 环境的搭建及安装（CLI3）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/zhengyan02020801/2019/06/21/js%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          js数组去重
+        
+      </div>
+    </a>
+  
+</nav>
+
+      
+      
+        
+
+
+
+
+
+
+
+
+      
+    </footer>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/zhengyan02020801/2020/05/21/js%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/">js时间转换</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/11/21/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">javascript设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/09/26/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/">防抖与节流</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/30/Vue%20ts/">Vue TypeScript</a>
+          </li>
+        
+          <li>
+            <a href="/zhengyan02020801/2019/06/21/js%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">js数组去重</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2020/">2020年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2019/">2019年</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/zhengyan02020801/archives/2018/">2018年</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="http://www.baidu.com/">百度</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.zhihu.com/">知乎</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/zhengyan02020801/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/zhengyan02020801/atom.xml">订阅本站</a>
+        <span> | </span><a href="/zhengyan02020801/about/">联系博主</a>
+      </p>
+      
+      <p>
+        <span>Copyright &copy; 2022 zhengyan.</span>
+        <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
+        <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </div>
+  
+<script src="/zhengyan02020801/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/zhengyan02020801/js/search.json.js"></script>
+
+
+  
+<script src="/zhengyan02020801/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/zhengyan02020801/js/script.js"></script>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+</body>
+</html>
