@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   
-  <title>归档: 2018/6 | zhengyan0202</title>
+  <title>React入门 | zhengyan0202</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   
@@ -80,35 +80,124 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-
-  
-  
+        <section id="main"><article id="post-React入门" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
     
     
-    <section class="archives-wrap">
-      <div class="archive-title">
+      <header class="article-header">
         
-          <i class="fa fa-date"></i>
-          2018年
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      React入门
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2022-12-04T10:41:06.000Z" itemprop="datePublished">2022年12月04日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/React/">React</a>
+  </div>
+
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<!-- <a href="/2022/12/04/React%E5%85%A5%E9%97%A8/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a> -->
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="创建React应用"><a href="#创建React应用" class="headerlink" title="创建React应用"></a>创建React应用</h4><p><strong>使用create-react-app创建react工程</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app my-app</span><br><span class="line">cd my-app</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h5 id="增加配置"><a href="#增加配置" class="headerlink" title="增加配置"></a>增加配置</h5><ol>
+<li>自定义配置、加载 less 样式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add @craco/craco -D    // 一个对 create-react-app 进行自定义配置的社区解决方案</span><br><span class="line">yarn add craco-less -D  // 加载 less 样式和修改变量。</span><br></pre></td></tr></table></figure>
+在项目根目录创建一个 craco.config.js 用于修改默认配置</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&#x27;path&#x27;)</span><br><span class="line">const CracoLessPlugin = require(&#x27;craco-less&#x27;);</span><br><span class="line">const resolve = pathname =&gt; path.resolve(__dirname, pathname)</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    &#123;</span><br><span class="line">      plugin: CracoLessPlugin,  // less</span><br><span class="line">      options: &#123;</span><br><span class="line">        lessLoaderOptions: &#123;</span><br><span class="line">          lessOptions: &#123;</span><br><span class="line">            modifyVars: &#123; &#x27;@primary-color&#x27;: &#x27;#1DA57A&#x27; &#125;,</span><br><span class="line">            javascriptEnabled: true,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  webpack: &#123;</span><br><span class="line">    alias: &#123;  // 配置路径别名</span><br><span class="line">      &quot;@&quot;: resolve(&quot;src&quot;),</span><br><span class="line">      &quot;components&quot;: resolve(&quot;src/components&quot;),</span><br><span class="line">      &quot;utils&quot;: resolve(&quot;src/utils&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>修改原项目中的css文件为less文件</strong><br>2. 安装antd</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn add antd</span><br><span class="line"></span><br><span class="line">/* src/index.less */</span><br><span class="line">+ @import &#x27;~antd/dist/antd.less&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        
+            <div id="toc-article">
+                
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
+
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2022/11/20/web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          web性能优化
         
       </div>
-      <div class="archives">
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/2018/06/23/%E7%BB%A7%E6%89%BF/">
-      <time class="dt-published" datetime="2018-06-23T11:52:33.000Z" itemprop="datePublished">2018年06月23日</time>
-      | <span class="archive-article-title">继承</span>
     </a>
-  </li>
-</ul>
+  
+  
+</nav>
+
+      
+      
+        
 
 
 
-  </div></section>
 
 
+
+
+
+      
+    </footer>
+  </div>
+</article>
 </section>
         
           <aside id="sidebar">
@@ -254,6 +343,9 @@
 
 
 
+
+  
+  
 
 
 

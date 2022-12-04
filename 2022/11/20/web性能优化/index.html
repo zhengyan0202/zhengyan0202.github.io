@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   
-  <title>归档: 2018/6 | zhengyan0202</title>
+  <title>web性能优化 | zhengyan0202</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   
@@ -80,35 +80,145 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-
-  
-  
+        <section id="main"><article id="post-web性能优化" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
     
     
-    <section class="archives-wrap">
-      <div class="archive-title">
+      <header class="article-header">
         
-          <i class="fa fa-date"></i>
-          2018年
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      web性能优化
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2022-11-20T10:01:01.000Z" itemprop="datePublished">2022年11月20日</time>
+</span>
+      
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<!-- <a href="/2022/11/20/web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a> -->
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="网络层面"><a href="#网络层面" class="headerlink" title="网络层面"></a>网络层面</h4><ol>
+<li>请求过程优化 —-  减少请求资源的大小<blockquote>
+<p>  Gzip压缩<br>  图片优化</p>
+</blockquote>
+<span id="more"></span></li>
+<li>减少网络请求 —-  本地存储<blockquote>
+<p>  浏览器的缓存机制<br>  离线存储技术<br>  合并CSS和JS<br>  使用CSS精灵图</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="渲染层面"><a href="#渲染层面" class="headerlink" title="渲染层面"></a>渲染层面</h4><ol>
+<li>服务端渲染</li>
+<li>浏览器的渲染机制解析<blockquote>
+<p>css性能方案  (css 写在头部)<br>s性能方案  使用最新版的框架或库（函数节流&#x2F;防抖, 按需引入, 滚动加载）</p>
+</blockquote>
+</li>
+<li>DOM优化<blockquote>
+<p>事件循环与异步更新<br>重排（回流）和重绘</p>
+</blockquote>
+</li>
+<li>首屏渲染提速 懒加载</li>
+<li>Web Worker 用于那些处理纯数据，或者与浏览器 UI 无关的长时间运行脚本；</li>
+</ol>
+<h4 id="性能监控"><a href="#性能监控" class="headerlink" title="性能监控"></a>性能监控</h4><ol>
+<li>可视化工具 performance、lighthouse</li>
+<li>w3c性能API</li>
+</ol>
+<h4 id="前端缓存："><a href="#前端缓存：" class="headerlink" title="前端缓存："></a>前端缓存：</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zz_jesse/article/details/123304077">https://blog.csdn.net/zz_jesse/article/details/123304077</a></p>
+<h6 id="强缓存："><a href="#强缓存：" class="headerlink" title="强缓存："></a>强缓存：</h6><p>强缓存主要使用Expires、Cache-Control 两个头字段，两者同时存在Cache-Control 优先级更高。&#x3D;&#x3D;当命中强缓存的时候，客户端不会再求，直接从缓存中读取内容，并返回HTTP状态码200。&#x3D;&#x3D;<br>当客户端请求服务器的时候，服务器会返回资源的同时还会带上响应头Expires，表示资源的过期具体时间，如果客户端在过期时间之前再次获取该资源，就不需要再请求我服务器了，可以直接在缓存里面拿。</p>
+<h6 id="协商缓存："><a href="#协商缓存：" class="headerlink" title="协商缓存："></a>协商缓存：</h6><p>协商缓存主要有四个头字段，它们两两组合配合使用，If-Modified-Since 和 Last-Modified一组，Etag 和 If-None-Match一组，当同时存在的时候会以Etag 和 If-None-Match为主。&#x3D;&#x3D;当命中协商缓存的时候，服务器会返回HTTP状态码304，让客户端直接从本地缓存里面读取文件。&#x3D;&#x3D;<br>当客户端第一次请求服务器的时候，服务端会返回一个Etag响应头。客户端请求服务器的时候会带上If-None-Match请求头字段，该字段的值就是服务器返回的Etag的值。服务器接收到请求后会比较这两个值是否一样，一样就返回304，让客户端从缓存中读取，不一样就会返回新文件给客户端并更新Etag响应头字段的值。</p>
+
+        
+            <div id="toc-article">
+                
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2020/05/21/js%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          js时间转换
         
       </div>
-      <div class="archives">
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/2018/06/23/%E7%BB%A7%E6%89%BF/">
-      <time class="dt-published" datetime="2018-06-23T11:52:33.000Z" itemprop="datePublished">2018年06月23日</time>
-      | <span class="archive-article-title">继承</span>
     </a>
-  </li>
-</ul>
+  
+  
+    <a href="/2022/12/04/React%E5%85%A5%E9%97%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          React入门
+        
+      </div>
+    </a>
+  
+</nav>
+
+      
+      
+        
 
 
 
-  </div></section>
 
 
+
+
+
+      
+    </footer>
+  </div>
+</article>
 </section>
         
           <aside id="sidebar">
@@ -254,6 +364,9 @@
 
 
 
+
+  
+  
 
 
 
