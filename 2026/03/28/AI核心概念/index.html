@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>AI核心概念 | zhengyan0202</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+  
+    <link rel="alternate" href="/atom.xml" title="zhengyan0202" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zhengyan0202</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">时间是一种睿智的存在，不会辜负每一点付出。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/archives/"><i class="fa fa-archive"></i> 归档</a>
+        
+          <a class="main-nav-link" href="/about/"><i class="fa fa-user"></i> 关于</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-AI核心概念" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      AI核心概念
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2026-03-28T13:27:05.000Z" itemprop="datePublished">2026年03月28日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/AI/">AI</a>
+  </div>
+
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、底层引擎LLM"><a href="#一、底层引擎LLM" class="headerlink" title="一、底层引擎LLM"></a>一、底层引擎LLM</h2><h3 id="核心定义与架构"><a href="#核心定义与架构" class="headerlink" title="核心定义与架构"></a>核心定义与架构</h3><ul>
+<li>LLM全称：Large Language Model (大语言模型) ，简称<strong>大模型</strong></li>
+<li>底层架构：基于<strong>Transformer</strong> (2017年Google团队在论文《Attention is All You Need》中提出)</li>
+<li>工作原理：本质是<strong>文字接龙游戏</strong>，通过预测下一个概率最高的词生成连续文本</li>
+</ul>
+<h3 id="发展里程碑"><a href="#发展里程碑" class="headerlink" title="发展里程碑"></a>发展里程碑</h3><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2017年</td>
+<td>Transformer架构提出</td>
+<td>奠定大模型基础技术</td>
+</tr>
+<tr>
+<td>2022年底</td>
+<td>GPT-3.5发布</td>
+<td>首个达到可用级别的大模型</td>
+</tr>
+<tr>
+<td>2023年3月</td>
+<td>GPT-4发布</td>
+<td>大幅提升AI能力天花板</td>
+</tr>
+<tr>
+<td>2023年后</td>
+<td>Claude、Gemini等模型涌现</td>
+<td>AI赛道有OpenAI独角戏变为多强竞争</td>
+</tr>
+</tbody></table>
+<h2 id="二、数据处理单元：Token"><a href="#二、数据处理单元：Token" class="headerlink" title="二、数据处理单元：Token"></a>二、数据处理单元：Token</h2><h3 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h3><ul>
+<li>定义：大模型处理文本的<strong>最小单位</strong>，通过Tokenizer（分词器）将文本切分为片段</li>
+<li>编码过程：分为两步–1.文本切分为Token  2.映射为Token ID（数字）</li>
+<li>解码过程：将Token ID还原为文本（无需切分步骤）</li>
+</ul>
+<h3 id="Token与自然语言单位的关系"><a href="#Token与自然语言单位的关系" class="headerlink" title="Token与自然语言单位的关系"></a>Token与自然语言单位的关系</h3><table>
+<thead>
+<tr>
+<th>语言单位</th>
+<th>与Token的关系</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中文词语</td>
+<td>非一一对应，可能被拆分</td>
+<td>“程序员”→“程序”+“员”</td>
+</tr>
+<tr>
+<td>英文单词</td>
+<td>常见词语通常一应一个Token</td>
+<td>“hello”→ 1个Token</td>
+</tr>
+<tr>
+<td>复杂单词</td>
+<td>可能被拆分</td>
+<td>“helpful”→“help”+“ful”</td>
+</tr>
+<tr>
+<td>特殊字符</td>
+<td>可能需要多个Token表示</td>
+<td>“✅️”→ 3个Token</td>
+</tr>
+</tbody></table>
+<h3 id="量化参考"><a href="#量化参考" class="headerlink" title="量化参考"></a>量化参考</h3><ul>
+<li>1个Token ≈ 0.75个英文单词</li>
+<li>1个Token ≈ 1.5-2个汉字</li>
+<li>40Token ≈ 60-80万汉字或30万英文单词</li>
+</ul>
+<h2 id="三、临时记忆体：Context"><a href="#三、临时记忆体：Context" class="headerlink" title="三、临时记忆体：Context"></a>三、临时记忆体：Context</h2><h3 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h3><ul>
+<li>定义：大模型每次处理任务时接收的<strong>信息总和</strong>，相当于模型的“临时记忆”</li>
+<li>组成部分：用户问题、对话历史、当期输出Token、工具列表、System Prompt等</li>
+<li>容量限制：有<strong>Context Window</strong>（上下文窗口）定义，即最大可处理的Token数量</li>
+</ul>
+<h3 id="主流模型Context-Window对比"><a href="#主流模型Context-Window对比" class="headerlink" title="主流模型Context Window对比"></a>主流模型Context Window对比</h3><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>Context Window （Token）</th>
+<th>约合汉字数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPT-5.4</td>
+<td>105万</td>
+<td>约157.5万</td>
+</tr>
+<tr>
+<td>Gemini 3.1 Pro</td>
+<td>100万</td>
+<td>150万</td>
+</tr>
+<tr>
+<td>Claude Opus 4.6</td>
+<td>100万</td>
+<td>150万</td>
+</tr>
+</tbody></table>
+<h3 id="突破Context-Window限制的方案"><a href="#突破Context-Window限制的方案" class="headerlink" title="突破Context Window限制的方案"></a>突破Context Window限制的方案</h3><ul>
+<li><strong>RAG技术</strong>（检索增强生成）：从知识库中抽取与问题相关的片段，仅将关键信息送入模型，降低Token消耗</li>
+</ul>
+<h2 id="四、指令交互：Prompt"><a href="#四、指令交互：Prompt" class="headerlink" title="四、指令交互：Prompt"></a>四、指令交互：Prompt</h2><h3 id="定义与分类"><a href="#定义与分类" class="headerlink" title="定义与分类"></a>定义与分类</h3><ul>
+<li>Prompt：给大模型的<strong>问题或指令</strong>，决定模型输出质量</li>
+<li>Prompt分类：<ul>
+<li>User Prompt：用户输入的具体任务（如：帮我写一首诗）</li>
+<li>System Prompt：开发者后台配置的<strong>人设与做事规则</strong>（如“你是一个耐心的数学老师，当学生提问你数学问题时，不要直接给答案，而是要一步一步引导学生思考，帮助他们理解解题思路”）</li>
+</ul>
+</li>
+</ul>
+<h2 id="五、外部能力扩展：Tool"><a href="#五、外部能力扩展：Tool" class="headerlink" title="五、外部能力扩展：Tool"></a>五、外部能力扩展：Tool</h2><h3 id="核心作用"><a href="#核心作用" class="headerlink" title="核心作用"></a>核心作用</h3><ul>
+<li>定义：大模型调用<strong>外部函数</strong>，使其能够感知和影响外部环境</li>
+<li>解决痛点：弥补大模型无法获取实时信息（如天气）、计算能力有限等弱点</li>
+</ul>
+<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ol>
+<li>用户提问→平台转发（含工具列表）</li>
+<li>大模型分析→生成工具调用指令</li>
+<li>平台执行调用→获取结果</li>
+<li>大模型整理结果→自然语言输出</li>
+</ol>
+<h3 id="角色分工"><a href="#角色分工" class="headerlink" title="角色分工"></a>角色分工</h3><table>
+<thead>
+<tr>
+<th>角色</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大模型</td>
+<td>选择工具、生成参数、归纳结果</td>
+</tr>
+<tr>
+<td>工具</td>
+<td>执行集体功能（如查询天气）</td>
+</tr>
+<tr>
+<td>平台</td>
+<td>转发消息、执行工具调用</td>
+</tr>
+</tbody></table>
+<h2 id="六、工具标准化：MCP"><a href="#六、工具标准化：MCP" class="headerlink" title="六、工具标准化：MCP"></a>六、工具标准化：MCP</h2><ul>
+<li><p>全称：Model Context Protocol（模型上下文协议）</p>
+</li>
+<li><p>本质：理解为<strong>统一的工具介入标准</strong>，解决不同平台工具接入规范不统一的问题。</p>
+<p> 比如：OpenAI、Anthropic、Google三个平台各自有接入规范，用一个要写一个接入规范，所以想搞一个统一的技术规范标准。<br> 就像手机都统一用type c充电口统一标准</p>
+</li>
+<li><p>价值：工具开发者只需按MCP规范开发一次，即可在所有支持MCP的平台使用（类比手机Type-C接口）</p>
+</li>
+</ul>
+<h2 id="七、自主决策系统：Agent"><a href="#七、自主决策系统：Agent" class="headerlink" title="七、自主决策系统：Agent"></a>七、自主决策系统：Agent</h2><ul>
+<li>Agent定义：能够<strong>自主规划、自主调用工具</strong>，持续工作直至完成用户任务的系统</li>
+<li>核心能力：多步骤推理、工具选择、流程控制</li>
+<li>代表产品：Claude Code、Codex、Gemini CLI等</li>
+<li>典型构建模式：React、Plan and Execute等</li>
+</ul>
+<h2 id="八、任务定制：Agent-Skill"><a href="#八、任务定制：Agent-Skill" class="headerlink" title="八、任务定制：Agent Skill"></a>八、任务定制：Agent Skill</h2><h3 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h3><ul>
+<li>定义：给Agent的<strong>说明文档</strong>，包含任务规划、执行步骤、输出格式等</li>
+<li>结构：<ul>
+<li>元数据层：名称（name），描述（description）</li>
+<li>指令层：目标、执行步骤、判断规则、输出格式、示例</li>
+</ul>
+</li>
+</ul>
+<h3 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h3><ul>
+<li>存储形式：Markdown文档（文件名必须为“SKILL.md”）</li>
+<li>存放位置：特定目录（如Claude Code找到用户目录的“.claude&#x2F;skills”文件夹）</li>
+<li>加载机制：尽在用户问题与技能名称&#x2F;描述相关时加载完成命令</li>
+</ul>
+<h2 id="九、概念体系关联"><a href="#九、概念体系关联" class="headerlink" title="九、概念体系关联"></a>九、概念体系关联</h2><p>![概念体系层级关系]<br>LLM（核心引擎）→ Token（数据单位）→ Context（记忆空间）→ Prompt（交互接口）→ Tool（外部能力）→ MCP（工具标准）→ Agent（决策系统）→ Agent Skill（任务定制）</p>
+<h3 id="补充细节"><a href="#补充细节" class="headerlink" title="补充细节"></a>补充细节</h3><ul>
+<li>Transformer架构：虽由Google提出，但由OpenAI通过GPT系列引爆应用</li>
+<li>Token切分原理：基于BPE（字节编码）算法，模型自主学习的文本切分规则</li>
+<li>Agent Skill高级特性：支持运行代码、引用资源，采用渐进式披露机智节省Token</li>
+<li>RAG技术：通过检索相关片段而非全文，有效解决Context Window限制问题</li>
+</ul>
+
+        
+            <div id="toc-article">
+                
+  <div class="widget-wrap" id="toc-wrap">
+    <h3 class="widget-title"><i class="fa fa-toc"></i> 文章目录</h3>
+    <div class="widget">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BA%95%E5%B1%82%E5%BC%95%E6%93%8ELLM"><span class="toc-text">一、底层引擎LLM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9E%B6%E6%9E%84"><span class="toc-text">核心定义与架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E5%B1%95%E9%87%8C%E7%A8%8B%E7%A2%91"><span class="toc-text">发展里程碑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%8D%95%E5%85%83%EF%BC%9AToken"><span class="toc-text">二、数据处理单元：Token</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7"><span class="toc-text">核心特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Token%E4%B8%8E%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%8D%95%E4%BD%8D%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">Token与自然语言单位的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8F%E5%8C%96%E5%8F%82%E8%80%83"><span class="toc-text">量化参考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BF%86%E4%BD%93%EF%BC%9AContext"><span class="toc-text">三、临时记忆体：Context</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">核心概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%B5%81%E6%A8%A1%E5%9E%8BContext-Window%E5%AF%B9%E6%AF%94"><span class="toc-text">主流模型Context Window对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%81%E7%A0%B4Context-Window%E9%99%90%E5%88%B6%E7%9A%84%E6%96%B9%E6%A1%88"><span class="toc-text">突破Context Window限制的方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8C%87%E4%BB%A4%E4%BA%A4%E4%BA%92%EF%BC%9APrompt"><span class="toc-text">四、指令交互：Prompt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="toc-text">定义与分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%A4%96%E9%83%A8%E8%83%BD%E5%8A%9B%E6%89%A9%E5%B1%95%EF%BC%9ATool"><span class="toc-text">五、外部能力扩展：Tool</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E4%BD%9C%E7%94%A8"><span class="toc-text">核心作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E5%88%86%E5%B7%A5"><span class="toc-text">角色分工</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%B7%A5%E5%85%B7%E6%A0%87%E5%87%86%E5%8C%96%EF%BC%9AMCP"><span class="toc-text">六、工具标准化：MCP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%87%AA%E4%B8%BB%E5%86%B3%E7%AD%96%E7%B3%BB%E7%BB%9F%EF%BC%9AAgent"><span class="toc-text">七、自主决策系统：Agent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%BB%BB%E5%8A%A1%E5%AE%9A%E5%88%B6%EF%BC%9AAgent-Skill"><span class="toc-text">八、任务定制：Agent Skill</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="toc-text">核心功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0"><span class="toc-text">技术实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%A6%82%E5%BF%B5%E4%BD%93%E7%B3%BB%E5%85%B3%E8%81%94"><span class="toc-text">九、概念体系关联</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E7%BB%86%E8%8A%82"><span class="toc-text">补充细节</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+            </div>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Token/" rel="tag">Token</a></li></ul>
+
+          
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/2026/03/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/29/Token%E6%98%AF%E4%BB%80%E4%B9%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          Token是什么
+        
+      </div>
+    </a>
+  
+</nav>
+
+      
+      
+        
+
+
+
+
+
+
+
+
+      
+    </footer>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/29/Token%E6%98%AF%E4%BB%80%E4%B9%88/">Token是什么</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/28/AI%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">AI核心概念</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2026/01/28/%E6%B5%85%E6%9E%90VUEdiff%E7%AE%97%E6%B3%95/">浅析Vue diff算法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/04/React%E5%85%A5%E9%97%A8/">React入门</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-tag"></i> 标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LLM/" style="font-size: 10px;">LLM</a> <a href="/tags/Token/" style="font-size: 20px;">Token</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-classify"></i> 分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026年</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022年</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-tag"></i> 标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Token/" rel="tag">Token</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.qianwen.com/">千问</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.doubao.com/chat/">豆包</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/atom.xml">订阅本站</a>
+        <span> | </span><a href="/about/">联系博主</a>
+      </p>
+      
+      <p>
+        <span>Copyright &copy; 2026 zhengyan.</span>
+        <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
+        <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </div>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/search.json.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+</body>
+</html>
